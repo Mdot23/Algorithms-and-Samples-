@@ -1,3 +1,3 @@
 # Algorithms-and-Samples-
 
-Contains Algorithims and Samples to reference. 
+Contains Algorithims and Samples. 
