@@ -1,5 +1,8 @@
+"""
+    def print_time(self):
+        print('%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second))
+"""
 import timeit
-
 
 class Time:
 
@@ -8,8 +11,10 @@ class Time:
         self.minute = minute 
         self.second = second 
 
-    def print_time(self):
-        print('%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second))
+    
+    def __str__(self):
+        return '%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second)
+
 
     def time_to_init(self):
         """ Computes the number of seconds since midnight """ 
@@ -29,7 +34,7 @@ class Time:
     
     def increment(self, seconds):
         seconds += self.time_to_int()
-        return(init_to_time(seconds))
+        return init_to_time(seconds)
 
     def is_valid(self):
         if self.hour < 0 or self.minute < 0 or self.second < 0:
@@ -49,9 +54,4 @@ def init_to_time(seconds):
     hour, minute = divmod(minutes, 60)
     time = Time(hour, minute, second)
     return time 
-
-
-
-
-
 
