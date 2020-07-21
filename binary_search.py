@@ -15,7 +15,9 @@ def search(list, n):
             if list[mid] < n:
                 l = mid
             else:
-                u = mid
+                u = mid + 1 
+        return False
+
 
 
 list = [4, 7, 12, 20, 30, 40, 50, 66, 72, 82, 85]
