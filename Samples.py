@@ -33,3 +33,37 @@ def duplicate(v):
            return True
        d[i] = True
    return False 
+
+
+
+
+# Using zip for tuple assignment 
+Stage = [('a', 'PROD'), ('b', 'INTEG'), ('c', 'DevTest')]
+Stage2 = [('d', 'TEST')]
+def has_match(Stage, Stage2):
+    for x, y in zip(Stage, Stage2):
+        if x == y:
+            return True
+    return False
+
+# Using enumerate to traverse elements + indicies 
+for index, element in enumerate('123'):
+    print(index,element)
+
+
+
+# Sort elements in list from shortest to longest 
+words = ["PROD", "TESTING", "BETA"]
+def sort_by_length(words):
+    l = []
+    for word in words:
+        l.append((len(word), word))
+    
+    l.sort(reverse=True)
+
+    res = []
+    for length, word in l:
+        res.append(word)
+    return res 
+
+    
