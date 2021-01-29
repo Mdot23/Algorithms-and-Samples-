@@ -2,7 +2,13 @@
 # First for loop stores the occurred characters and their corresponding frequencies
 # Second loop is to loop over the string sequence again if the next character exists and the# number of occurrences is 1, then return this character’s index. Otherwise, returns -1. 
 # Using this method, we find the first unique character in a string.
-
+"""
+1. Pass string_data to function 
+2. Create dictionary to store input string 
+3. itterate over elements in string_data 
+4. Implement counter 
+5. Loop over string again using enumerate as counter to determine if character exists 
+"""
 
 def first_uniqchar(string_data):
 
