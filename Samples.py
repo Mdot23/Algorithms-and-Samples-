@@ -66,4 +66,7 @@ def sort_by_length(words):
         res.append(word)
     return res 
 
-    
+# Itterate through a LISTS of Dictionaries. Example givien = ['Value'{'Dictionariy key: 'Dictionary Value'}...]
+for index in range(len(datalist)):
+    for key in datalist[index]:
+        print(dataList[index][key])
