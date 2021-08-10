@@ -27,3 +27,26 @@ def increment_account_id(account_id):
 
 final_output = map(increment_account_id, account_id)
 list(final_output)
+
+# Conditionals | Can also add conditionals at the end of a list comprehension
+# In this example, thi will filter out anyone words that aren't the keyword value best 
+sentence = 'Milton is the best'
+keywords = [i for i in sentence if i in 'best']
+
+# For changing a value instead of filtering it out, it's best to place conditional in beginning of expression
+home_prices = [230000, 500000, 650000, 100000, 520500, 230500, 800500]
+budget_filter = [i if i < 500000 else 0 for i in home_prices]
+budget_filter
+# Can also create a Function for this 
+def get_price(price):
+    return price if price < 500000 else 0
+prices = [get_price(i) for i in home_prices]
+prices
+
+# Set Comprehension 
+message = "The acccount id 123456789123"
+filter = {i for i in message if i in 'id'}
+filter
+
+
+
